@@ -41,4 +41,12 @@
                 LEFT JOIN ums_admin_role_relation ar ON rr.role_id = ar.role_id
         WHERE rr.resource_id=#{resourceId}
     </select>
+    <select id="test" resultType="test">
+        select *
+        from tst
+        where id in
+        <foreach collection="list" item="item" index="index" open="">
+
+        </foreach>
+    </select>
 </mapper>
